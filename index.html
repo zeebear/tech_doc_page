@@ -5,31 +5,104 @@
   <meta name="viewport" content="initial-scale=1">
   <meta name="Description" content="Technical Documentation Page for freeCodeCamp assignment made with HTML and CSS, no JavaScript">
 
-  <title>Technical Documentation Page</title>
+  <title>Technical Documentation Page -- Ruby Documentation</title>
 </head>
 <body>
   <nav id="navbar">
-    <header></header>
-    <a href="" class="nav-link"></a>
-    <a href="" class="nav-link"></a>
+    <header>Ruby Documentation</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Comments" class="nav-link">Comments</a>
+    <a href="#Objects" class="nav-link">Objects</a>
+    <a href="#Basic_Arithmetic" class="nav-link">Basic Arithmetic</a>
+    <a href="#Bitwise_Operators" class="nav-link">Bitwise Operators</a>
     <a href="" class="nav-link"></a>
     <a href="" class="nav-link"></a>
     <a href="" class="nav-link"></a>
   </nav>
   <main id="main-doc">
-    <section id="" class="main-section 1">
+    <section id="Introduction" class="main-section 1">
+      <header>Introduction</header>
+      <p>The entire contents of this page were lifted directly from <a href="https://learnxinyminutes.com/docs/ruby/">Learn X in Y minutes' excellent Ruby overview</a>. I hope they don't mind, but if they do I'll take it down immediately!</p>
+      <p>
+        This page was built as a project for the <a href="https://www.freecodecamp.org/">freeCodeCamp</a> Responsive Web Design Certification.
+      </p>
+    </section>
+    <section id="Comments" class="main-section 2">
+      <header>Comments</header>
+      <p class="comment">
+        # This is a comment
+        <br>
+        =begin
+        This is a multi-line comment.
+        The beginning line must start with "=begin"
+        and the ending line must start with "=end".
+        <br>
+        You can do this, or start each line in
+        a multi-line comment with the # character.
+        =end
+      </p>
+    </section>
+    <section id="Objects" class="main-section 3">
+      <header>Objects</header>
+      <p class="comment">
+        # In Ruby, (almost) everything is an object.
+        # This includes numbers...
+      </p>
+      <code>
+        3.class #=> Integer
+      </code>
+      <p class="comment">
+        # ...and strings...
+      </p>
+      <code>
+        "Hello".class #=> String
+      </code>
+      <p class="comment">
+        # ...and even methods!
+      </p>
+      <code>
+        "Hello".method(:class).class #=> Method
+      </code>
+    </section>
+    <section id="Basic_Arithmetic" class="main-section 4">
+      <header>Basic Arithmetic</header>
+      <p class="comment">
+        # Some basic arithmetic
+      </p>
+      <code>
+        1 + 1 #=> 2
+        <br>
+        8 - 1 #=> 7
+        <br>
+        10 * 2 #=> 20
+        <br>
+        35 / 5 #=> 7
+        <br>
+        2 ** 5 #=> 32
+        <br>
+        5 % 3 #=> 2
+      </code>
+    </section>
+    <section id="Bitwise_Operators" class="main-section 5">
+      <header>Bitwise Operators</header>
+      <p class="comment">
+        # Bitwise operators [<a href="https://en.wikipedia.org/wiki/Bitwise_operation">on Wikipedia</a>]
+      </p>
+      <code>
+        3 & 5 #=> 1 [<a href="https://en.wikipedia.org/wiki/Logical_conjunction">AND</a>]
+        <br>
+        3 | 5 #=> 7 [<a href="https://en.wikipedia.org/wiki/Logical_disjunction">OR</a>]
+        <br>
+        3 ^ 5 #=> 6 [<a href="https://en.wikipedia.org/wiki/Exclusive_disjunction">XOR</a>]
+      </code>
+    </section>
+    <section id="" class="main-section 6">
       <header></header>
     </section>
-    <section id="" class="main-section 2">
+    <section id="" class="main-section 7">
       <header></header>
     </section>
-    <section id="" class="main-section 3">
-      <header></header>
-    </section>
-    <section id="" class="main-section 4">
-      <header></header>
-    </section>
-    <section id="" class="main-section 5">
+    <section id="" class="main-section 8">
       <header></header>
     </section>
   </main>
