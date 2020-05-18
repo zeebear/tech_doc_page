@@ -15,9 +15,18 @@
     <a href="#Objects" class="nav-link">Objects</a>
     <a href="#Basic_Arithmetic" class="nav-link">Basic Arithmetic</a>
     <a href="#Bitwise_Operators" class="nav-link">Bitwise Operators</a>
-    <a href="" class="nav-link"></a>
-    <a href="" class="nav-link"></a>
-    <a href="" class="nav-link"></a>
+    <a href="#Everything_is_an_object" class="nav-link">Everything is an object</a>
+    <a href="#Comparisons_and_Operators" class="nav-link">Comparisons and Operators</a>
+    <a href="#Logical_Operators" class="nav-link">Logical Operators</a>
+    <a href="#String_Interpolation_and_Manipulation" class="nav-link">String Interpolation and Manipulation</a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
+    <a href="#" class="nav-link"></a>
   </nav>
   <main id="main-doc">
     <section id="Introduction" class="main-section 1">
@@ -96,13 +105,200 @@
         3 ^ 5 #=> 6 [<a href="https://en.wikipedia.org/wiki/Exclusive_disjunction">XOR</a>]
       </code>
     </section>
-    <section id="" class="main-section 6">
+    <section id="Everything_is_an_object" class="main-section 6">
+      <header>Everything is an object</header>
+      <p class="comment">
+        # Arithmetic is just syntactic sugar
+        # for calling a method on an object
+      </p>
+      <code>
+        1.+(3) #=> 4
+        <br>
+        10.* 5 #=> 50
+        <br>
+        100.methods.include?(:/) #=> true
+      </code>
+      <p class="comment">
+        # Special values are objects
+      </p>
+      <code>
+        nil # equivalent to null in other languages
+        <br>
+        true # truth
+        <br>
+        false # falsehood
+      </code>
+      <code>
+        nil.class #=> NilClass
+        <br>
+        true.class #=> TrueClass
+        <br>
+        false.class #=> FalseClass
+      </code>
+    </section>
+    <section id="Comparisons_and_Operators" class="main-section 7">
+      <header>Comparisons and Operators</header>
+      <p class="comment">
+        # Equality
+      </p>
+      <code>
+        1 == 1 #=> true
+        <br>
+        2 == 1 #=> false
+      </code>
+      <p class="comment">
+        # Inequality
+      </p>
+      <code>
+        1 != 1 #=> false
+        <br>
+        2 != 1 #=> true
+      </code>
+      <p class="comment">
+        # Apart from false itself, nil is the only other 'falsey' value
+      </p>
+      <code>
+        !!nil   #=> false
+        <br>
+        !!false #=> false
+        <br>
+        !!0     #=> true
+        <br>
+        !!""    #=> true
+      </code>
+      <p class="comment">
+        # More comparisons
+      </p>
+      <code>
+        1 < 10 #=> true
+        <br>
+        1 > 10 #=> false
+        <br>
+        2 <= 2 #=> true
+        <br>
+        2 >= 2 #=> true
+      </code>
+      <p class="comment">
+        # Combined comparison operator (returns `1` when the first argument is greater,
+        # `-1` when the second argument is greater, and `0` otherwise)
+      </p>
+      <code>
+        1 <=> 10 #=> -1 (1 < 10)
+        <br>
+        10 <=> 1 #=> 1 (10 > 1)
+        <br>
+        1 <=> 1 #=> 0 (1 == 1)
+      </code>
+    </section>
+    <section id="Logical_Operators" class="main-section 8">
+      <header>Logical Operators</header>
+      <p class="comment">
+        # Logical operators
+      </p>
+      <code>
+        true && false #=> false
+        <br>
+        true || false #=> true
+      </code>
+      <p class="comment">
+        # There are alternate versions of the logical operators with much lower
+        # precedence. These are meant to be used as flow-control constructs to chain
+        # statements together until one of them returns true or false.
+      </p>
+      <p class="comment">
+        # `do_something_else` only called if `do_something` succeeds.
+      </p>
+      <code>
+        do_something() and do_something_else()
+      </code>
+      <p class="comment">
+        # `log_error` only called if `do_something` fails.
+      </p>
+      <code>
+        do_something() or log_error()
+      </code>
+    </section>
+    <section id="String_Interpolation_and_Manipulation" class="main-section 9">
+      <header>String Interpolation and Manipulation</header>
+      <p class="comment">
+        # String interpolation
+      </p>
+      <code>
+        placeholder = 'use string interpolation'
+        <br>
+        "I can #{placeholder} when using double quoted strings"
+      </code>
+      <p class="comment">
+        #=> "I can use string interpolation when using double quoted strings"
+      </p>
+      <p class="comment">
+        # You can combine strings using `+`, but not with other types
+      </p>
+      <code>
+        'hello ' + 'world'  #=> "hello world"
+        <br>
+        'hello ' + 3 #=> TypeError: can't convert Fixnum into String
+        <br>
+        'hello ' + 3.to_s #=> "hello 3"
+        <br>
+        "hello #{3}" #=> "hello 3"
+      </code>
+      <p class="comment">
+        # ...or combine strings and operators
+      </p>
+      <code>
+        'hello ' * 3 #=> "hello hello hello "
+      </code>
+      <p class="comment">
+        # ...or append to string
+      </p>
+      <code>
+        'hello' << ' world' #=> "hello world"
+      </code>
+      <p class="comment">
+        # You can print to the output with a newline at the end
+      </p>
+      <code>
+        puts "I'm printing!"
+      </code>
+      <p class="comment">
+        #=> I'm printing!
+      </p>
+      <p class="comment">
+        #=> nil
+      </p>
+      <p class="comment">
+        # ...or print to the output without a newline
+      </p>
+      <code>
+        print "I'm printing!"
+      </code>
+      <p class="comment">
+        #=> "I'm printing!" => nil
+      </p>
+    </section>
+    <section id="" class="main-section 10">
       <header></header>
     </section>
-    <section id="" class="main-section 7">
+    <section id="" class="main-section 11">
       <header></header>
     </section>
-    <section id="" class="main-section 8">
+    <section id="" class="main-section 12">
+      <header></header>
+    </section>
+    <section id="" class="main-section 13">
+      <header></header>
+    </section>
+    <section id="" class="main-section 14">
+      <header></header>
+    </section>
+    <section id="" class="main-section ">
+      <header></header>
+    </section>
+    <section id="" class="main-section ">
+      <header></header>
+    </section>
+    <section id="" class="main-section ">
       <header></header>
     </section>
   </main>
