@@ -6,27 +6,49 @@
   <meta name="Description" content="Technical Documentation Page for freeCodeCamp assignment made with HTML and CSS, no JavaScript">
 
   <title>Technical Documentation Page -- Ruby Documentation</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav id="navbar">
     <header>Ruby Documentation</header>
-    <a href="#Introduction" class="nav-link">Introduction</a>
-    <a href="#Comments" class="nav-link">Comments</a>
-    <a href="#Objects" class="nav-link">Objects</a>
-    <a href="#Basic_Arithmetic" class="nav-link">Basic Arithmetic</a>
-    <a href="#Bitwise_Operators" class="nav-link">Bitwise Operators</a>
-    <a href="#Everything_is_an_object" class="nav-link">Everything is an object</a>
-    <a href="#Comparisons_and_Operators" class="nav-link">Comparisons and Operators</a>
-    <a href="#Logical_Operators" class="nav-link">Logical Operators</a>
-    <a href="#String_Interpolation_and_Manipulation" class="nav-link">String Interpolation and Manipulation</a>
-    <a href="#Variables" class="nav-link">Variables</a>
-    <a href="#Symbols" class="nav-link">Symbols</a>
-    <a href="#Arrays" class="nav-link">Arrays</a>
-    <a href="#" class="nav-link"></a>
-    <a href="#" class="nav-link"></a>
-    <a href="#" class="nav-link"></a>
-    <a href="#" class="nav-link"></a>
-    <a href="#" class="nav-link"></a>
+    <input type="checkbox" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <!-- thanks to Jelena Jovanovic for the toggle inspiration! I have modified it from the code found in the following two places: -->
+    <!-- https://www.cssscript.com/css-hamburger-toggle-menu/ -->
+    <!-- https://codepen.io/plavookac/pen/qomrMw -->
+    <ul id="nav-links">
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#Comments" class="nav-link">Comments</a></li>
+      <li><a href="#Objects" class="nav-link">Objects</a></li>
+      <li><a href="#Basic_Arithmetic" class="nav-link">Basic Arithmetic</a></li>
+      <li><a href="#Bitwise_Operators" class="nav-link">Bitwise Operators</a></li>
+      <li><a href="#Everything_is_an_object" class="nav-link">Everything is an object</a></li>
+      <li><a href="#Comparisons_and_Operators" class="nav-link">Comparisons and Operators</a></li>
+      <li><a href="#Logical_Operators" class="nav-link">Logical Operators</a></li>
+      <li><a href="#String_Interpolation_and_Manipulation" class="nav-link">String Interpolation and Manipulation</a></li>
+      <li><a href="#Variables" class="nav-link">Variables</a></li>
+      <li><a href="#Symbols" class="nav-link">Symbols</a></li>
+      <li><a href="#Arrays" class="nav-link">Arrays</a></li>
+      <li><a href="#Hashes" class="nav-link">Hashes</a></li>
+      <li><a href="#Control_Structures" class="nav-link">Control Structures</a></li>
+      <li><a href="#Conditionals" class="nav-link">Conditionals</a></li>
+      <li><a href="#Loops" class="nav-link">Loops</a></li>
+      <li><a href="#Case_Construct" class="nav-link">Case Construct</a></li>
+      <li><a href="#Exception_Handling" class="nav-link">Exception Handling</a></li>
+      <li><a href="#Methods" class="nav-link">Methods</a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+      <li><a href="#" class="nav-link"></a></li>
+    </il>
   </nav>
   <main id="main-doc">
     <section id="Introduction" class="main-section 1">
@@ -436,10 +458,348 @@
         array.include?(1) #=> true
       </code>
     </section>
-    <section id="" class="main-section 13">
+    <section id="Hashes" class="main-section 13">
+      <header>Hashes</header>
+      <p class="comment">
+        # Hashes are Ruby's primary dictionary with key/value pairs.
+        <br>
+        # Hashes are denoted with curly braces.
+      </p>
+      <code>
+        hash = { 'color' => 'green', 'number' => 5 }
+      </code>
+      <code>
+        hash.keys #=> ['color', 'number']
+      </code>
+      <p class="comment">
+        # Hashes can be quickly looked up by key.
+      </p>
+      <code>
+        hash['color'] #=> "green"
+        <br>
+        hash['number'] #=> 5
+      </code>
+      <p class="comment">
+        # Asking a hash for a key that doesn't exist returns nil.
+      </p>
+      <code>
+        hash['nothing here'] #=> nil
+      </code>
+      <p class="comment">
+        # When using symbols for keys in a hash, you can use an alternate syntax.
+      </p>
+      <code>
+        has = { :defcon => 3, :action => true }
+        <br>
+        has.keys #=> [:defcon, :action]
+        <br>
+        <br>
+        has = { defcon: 3, action: true }
+        <br>
+        hash.keys #=> [:defcon, :action]
+      </code>
+      <p class="comment">
+        # Check existence of keys and values in hash
+      </p>
+      <code>
+        has.key?(:defcon) #=> true
+        <br>
+        hash.value?(3) #=> true
+      </code>
+      <p class="comment">
+        # Tip: Both Arrays and Hashes are Enumerable!
+        # They share a lot of useful methods such as each, map, count, and more.
+      </p>
+    </section>
+    <section id="Control_Structures" class="main-section 14">
+      <header>Control Structures</header>
+    </section>
+    <section id="Conditionals" class="main-section 15">
+      <header>Conditionals</header>
+      <p class="comment">
+        # Conditionals
+      </p>
+      <code>
+        if true
+        <br>
+        &nbsp;&nbsp;'if statement'
+        <br>
+        elsif false
+        <br>
+        &nbsp;&nbsp;'else if, optional'
+        <br>
+        else
+        <br>
+        &nbsp;&nbsp;'else, also optional'
+        <br>
+        end
+      </code>
+      <p class="comment">
+        # If a condition controls invocation of a single statement rather than a block of code
+        <br>
+        # you can use postfix-if notation
+      </p>
+      <code>
+        warnings = ['Patronimic is missing', 'Address too short']
+        <br>
+        puts("Some warnings occurred:\n" + warnings.join("\n"))  if !warnings.empty?
+      </code>
+      <p class="comment">
+        # Rephrase condition if `unless` sounds better than `if`
+      </p>
+      <code>
+        puts("Some warnings occurred:\n" + warnings.join("\n"))  unless warnings.empty?
+      </code>
+    </section>
+    <section id="Loops" class="main-section 16">
+      <header>Loops</header>
+      <p class="comment">
+        # Loops
+      </p>
+      <p class="comment">
+        # In Ruby, traditional `for` loops aren't very common. Instead, these
+        <br>
+        # basic loops are implemented using enumerable, which hinges on `each`.
+      </p>
+      <code>
+        (1..5).each do |counter|
+        <br>
+        &nbsp;&nbsp;puts "iteration #{counter}"
+        <br>
+        end
+      </code>
+      <p class="comment">
+        # Which is roughly equivalent to the following, which is unusual to see in Ruby.
+      </p>
+      <p class="comment">
+        # The `do |variable| ... end` construct above is called a 'block'. Blocks are similar
+        <br>
+        # to lambdas, anonymous functions or closures in other programming languages. They can
+        <br>
+        # be passed around as objects, called, or attached as methods.
+      </p>
+      <p class="comment">
+        # The 'each' method of a range runs the block once for each element of the range.
+        <br>
+        # The block is passed a counter as a parameter.
+      </p>
+      <p class="comment">
+        # You can also surround blocks in curly brackets.
+      </p>
+      <code>
+        (1..5).each { |counter| puts "iteration #{counter}" }
+      </code>
+      <p class="comment">
+        # The contents of data structures can also be iterated using each.
+      </p>
+      <code>
+        array.each do |element|
+        <br>
+        &nbsp;&nbsp;puts "#{element} is part of the array"
+        <br>
+        end
+        <br>
+        hash.each do |key, value|
+        <br>
+        &nbsp;&nbsp;puts "#{key} is #{value}"
+        <br>
+        end
+      </code>
+      <p class="comment">
+        # If you still need an index you can use 'each_with_index' and define an index
+        <br>
+        # variable.
+      </p>
+      <code>
+        array.each_with_index do |element, index|
+        <br>
+        &nbsp;&nbsp;puts "#{element} is number #{index} in the array"
+        <br>
+        end
+      </code>
+      <code>
+        counter = 1
+        while counter <= 5 do
+        &nbsp;&nbsp;puts "iteration #{counter}"
+        &nbsp;&nbsp;counter += 1
+        end
+        #=> iteration 1
+        #=> iteration 2
+        #=> iteration 3
+        #=> iteration 4
+        #=> iteration 5
+      </code>
+      <p class="comment">
+        # There are a bunch of other helpful looping functions in Ruby.
+        <br>
+        # For example: 'map', 'reduce', 'inject', the list goes on.
+        <br>
+        # Map, for instance, takes the array it's looping over, does something
+        <br>
+        # to it as defined in your block, and returns an entirely new array.
+      </p>
+      <code>
+        array = [1,2,3,4,5]
+        <br>
+        doubled = array.map do |element|
+        <br>
+        &nbsp;&nbsp;element * 2
+        <br>
+        end
+        <br>
+        puts doubled
+        <br>
+        #=> [2,4,6,8,10]
+        <br>
+        puts array
+        <br>
+        #=> [1,2,3,4,5]
+      </code>
+    </section>
+    <section id="Case_Construct" class="main-section 17">
+      <header>Case Construct</header>
+      <p class="comment">
+        # Case construct
+      </p>
+      <code>
+        grade = 'B'
+        <br>
+        <br>
+        case grade
+        <br>
+        when 'A'
+        <br>
+        &nbsp;&nbsp;puts 'Way to go kiddo'
+        <br>
+        when 'B'
+        <br>
+        &nbsp;&nbsp;puts 'Better luck next time'
+        <br>
+        when 'C'
+        <br>
+        &nbsp;&nbsp;puts 'You can do better'
+        <br>
+        when 'D'
+        <br>
+        &nbsp;&nbsp;puts 'Scraping through'
+        <br>
+        when 'F'
+        <br>
+        &nbsp;&nbsp;puts 'You failed!'
+        <br>
+        else
+        <br>
+        &nbsp;&nbsp;puts 'Alternative grading system, eh?'
+        <br>
+        end
+        <br>
+        #=> "Better luck next time"
+      </code>
+      <p class="comment">
+        # Cases can also use ranges
+      </p>
+      <code>
+        grade = 82
+        <br>
+        case grade
+        <br>
+        when 90..100
+        <br>
+        &nbsp;&nbsp;puts 'Hooray!'
+        <br>
+        when 80...90
+        <br>
+        &nbsp;&nbsp;puts 'OK job'
+        <br>
+        else
+        <br>
+        &nbsp;&nbsp;puts 'You failed!'
+        <br>
+        end
+        <br>
+        #=> "OK job"
+      </code>
+    </section>
+    <section id="Exception_Handling" class="main-section 18">
+      <header>Exception Handling</header>
+      <code>
+        begin
+        <br>
+        &nbsp;&nbsp;# Code here that might raise an exception
+        <br>
+        &nbsp;&nbsp;raise NoMemoryError, 'You ran out of memory.'
+        <br>
+        rescue NoMemoryError => exception_variable
+        <br>
+        &nbsp;&nbsp;puts 'NoMemoryError was raised', exception_variable
+        <br>
+        rescue RuntimeError => other_exception_variable
+        <br>
+        &nbsp;&nbsp;puts 'RuntimeError was raised now'
+        <br>
+        else
+        <br>
+        &nbsp;&nbsp;puts 'This runs if no exceptions were thrown at all'
+        <br>
+        ensure
+        <br>
+        &nbsp;&nbsp;puts 'This code always runs no matter what'
+        <br>
+        end
+      </code>
+    </section>
+    <section id="Methods" class="main-section 19">
+      <header>Methods</header>
+      <code>
+        def double(x)
+        <br>
+        &nbsp;&nbsp;x * 2
+        <br>
+        end
+      </code>
+      <p class="comment">
+        # Methods (and blocks) implicitly return the value of the last statement.
+      </p>
+      <code>
+        double(2) #=> 4
+      </code>
+      <p class="comment">
+        # Parentheses are optional where the interpretation is unambiguous.
+      </p>
+      <code>
+        double 3 #=> 6
+      </code>
+      <code>
+        double double 3 #=> 12
+      </code>
+      <code>
+        def sum(x, y)
+        <br>
+        &nbsp;&nbsp;x + y
+        <br>
+        end
+      </code>
+      <p class="comment">
+        # Method arguments are separated by a comma.
+      </p>
+      <code>
+        sum 3, 4 #=> 7
+      </code>
+      <code>
+        sum sum(3, 4), 5 #=> 12
+      </code>
+    </section>
+    <!-- next up: yield, line 373 -->
+    <section id="" class="main-section 20">
       <header></header>
     </section>
-    <section id="" class="main-section 14">
+    <section id="" class="main-section 21">
+      <header></header>
+    </section>
+    <section id="" class="main-section 22">
+      <header></header>
+    </section>
+    <section id="" class="main-section 23">
       <header></header>
     </section>
     <section id="" class="main-section ">

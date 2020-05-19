@@ -3,3 +3,130 @@
   zoom: 1.0;
 }
 /* as found here: https://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972 */
+@media screen and (max-width: 650px) {
+
+  #navbar > header {
+    position: sticky;
+    top: 0px;
+    height: 68px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hotpink;
+    z-index: 98;
+  }
+
+  /*toggle styling */
+
+  input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 99;
+    position: fixed;
+    top: 23px;
+    left: 8px;
+    height: 22px;
+    width: 22px;
+  }
+
+  .spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    height: 3px;
+    width: 100%;
+    background-color: #3d3220;
+  }
+
+  .horizontal {
+    transition: all 0.3s;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+  }
+
+  .diagonal.part-1 {
+    transition: all 0.3s;
+    position: relative;
+    float: left;
+  }
+
+  .diagonal.part-2 {
+    transition: all 0.3s;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+  }
+
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
+
+  /*toggle styling*/
+
+  input[type="checkbox"]:checked ~ #nav-links { transform: translateY(0px) }
+
+  #nav-links {
+    position: fixed;
+    height: 130px;
+    width: 100%;
+    margin: 0;
+    padding-inline-start: 0px;
+    overflow: auto;
+    transform: translateY(-130px);
+    background-color: orange;
+  }
+
+  #nav-links li {
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 24px;
+    border: 5px solid red;
+    list-style: none;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 650px) {
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background-color: #fff;
+  /*color: #ffbb4d;*/
+  color: #000;
+  width: 100%;
+}
+
+#navbar {
+  font-family: sans-serif;
+}
+
+#navbar > header {
+  font-size: 28px;
+}
