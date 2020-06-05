@@ -10,7 +10,7 @@
 
 [x] User Story #6: The `.main-section` elements should contain at least 5 `code` elements total (not each).
 
-[] User Story #7: The `.main-section` elements should contain at least 5 `li` items total (not each).
+[x] User Story #7: The `.main-section` elements should contain at least 5 `li` items total (not each).
 
 [x] User Story #8: I can see a `nav` element with a corresponding `id="navbar"`.
 
@@ -26,6 +26,6 @@
 
 ---
 
-[] User Story #14: On regular sized devices (laptops, desktops), the element with `id="navbar"` should be shown on the left side of the screen and should always be visible to the user.
+[x] User Story #14: On regular sized devices (laptops, desktops), the element with `id="navbar"` should be shown on the left side of the screen and should always be visible to the user.
 
-[] User Story #15: My Technical Documentation page should use at least one media query.
+[x] User Story #15: My Technical Documentation page should use at least one media query.

@@ -3,17 +3,12 @@
   zoom: 1.0;
 }
 /* as found here: https://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972 */
-@media screen and (max-width: 650px) {
-
+@media screen and (max-width: 700px) {
 
   #navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
-  }
-
-  #navbar > header {
-    justify-content: center;
   }
 
   /*toggle styling */
@@ -91,13 +86,15 @@
     margin: 0;
     overflow: auto;
     transform: translateY(-130px);
-    background-color: orange;
+    /*background-color: orange;*/
   }
 
   #nav-links li {
     min-height: 40px;
     font-size: 24px;
-    border: 5px solid red;
+    border-top: 2px grey;
+    background-color: white;
+    /*border: 5px solid red;*/
     text-align: center;
   }
 
@@ -106,12 +103,13 @@
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 700px) {
 
   #navbar {
     box-sizing: border-box;
     position: fixed;
     width: 25vw;
+    min-width: 190px;
     height: 100vh;
     overflow: auto;
     border-right: 3px solid grey;
@@ -120,10 +118,9 @@
   #navbar > header {
     background-color: hotpink;
     position: relative;
-    /*display: flex;*/
-    /*justify-content: center;*/
     font-size: 12px;
     padding-left: 24px;
+    padding-inline-start: 0px;
   }
 
   input[type=checkbox] {
@@ -159,10 +156,15 @@ body {
   background-color: #fff;
   color: #000;
   width: 100%;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 #navbar {
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 #navbar > header {
@@ -171,6 +173,7 @@ body {
   width: 100%;
   font-size: 28px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: hotpink;
   z-index: 98;
@@ -198,7 +201,7 @@ section > header {
 }
 
 #Control_Structures > header {
-  color: red;
+  color: hotpink;
 }
 
 code {
