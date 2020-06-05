@@ -13,14 +13,7 @@
   }
 
   #navbar > header {
-    position: relative;
-    height: 68px;
-    width: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: hotpink;
-    z-index: 98;
   }
 
   /*toggle styling */
@@ -96,19 +89,15 @@
     height: 130px;
     width: 100%;
     margin: 0;
-    padding-inline-start: 0px;
     overflow: auto;
     transform: translateY(-130px);
     background-color: orange;
   }
 
   #nav-links li {
-    height: 40px;
-    box-sizing: border-box;
-    width: 100%;
+    min-height: 40px;
     font-size: 24px;
     border: 5px solid red;
-    list-style: none;
     text-align: center;
   }
 
@@ -118,6 +107,47 @@
 }
 
 @media screen and (min-width: 650px) {
+
+  #navbar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+    overflow: auto;
+    border-right: 3px solid grey;
+  }
+
+  #navbar > header {
+    background-color: hotpink;
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    font-size: 12px;
+    padding-left: 24px;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  #nav-links{
+  }
+
+  #nav-links li {
+    border-top: 1px solid grey;
+    min-height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  #main-doc {
+    margin-left: 27vw;
+    padding-top: 2vw;
+  }
 
 }
 
@@ -136,5 +166,33 @@ body {
 }
 
 #navbar > header {
+  position: relative;
+  height: 68px;
+  width: 100%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  background-color: hotpink;
+  z-index: 98;
+}
+
+#nav-links {
+  margin: 0 auto;
+  padding-inline-start: 0px;
+}
+
+#nav-links li {
+  list-style: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+section > header {
+  font-family: sans-serif;
   font-size: 28px;
 }
