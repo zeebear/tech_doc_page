@@ -81,12 +81,12 @@
     <section id="Objects" class="main-section 3">
       <header>Objects</header>
       <p class="comment">
-        # In Ruby, (almost) everything is an object.<br>
+        In Ruby, (almost) everything is an object.<br>
         This includes numbers...
       </p>
       <p>
         <code>
-          3.class #=> Integer
+          3.class<br>#=> Integer
         </code>
       </p>
       <p class="comment">
@@ -94,7 +94,7 @@
       </p>
       <p>
         <code>
-          "Hello".class #=> String
+          "Hello".class<br>#=> String
         </code>
       </p>
       <p class="comment">
@@ -102,7 +102,7 @@
       </p>
       <p>
         <code>
-          "Hello".method(:class).class #=> Method
+          "Hello".method(:class).class<br>#=> Method
         </code>
       </p>
     </section>
@@ -111,32 +111,32 @@
       <p class="comment">
         Some basic arithmetic
       </p>
-      <code>
-        1 + 1 #=> 2
+      <p><code>
+        1 + 1<br>#=> 2
         <br>
-        8 - 1 #=> 7
+        8 - 1<br>#=> 7
         <br>
-        10 * 2 #=> 20
+        10 * 2<br>#=> 20
         <br>
-        35 / 5 #=> 7
+        35 / 5<br>#=> 7
         <br>
-        2 ** 5 #=> 32
+        2 ** 5<br>#=> 32
         <br>
-        5 % 3 #=> 2
-      </code>
+        5 % 3<br>#=> 2
+      </code></p>
     </section>
     <section id="Bitwise_Operators" class="main-section 5">
       <header>Bitwise Operators</header>
       <p class="comment">
         Bitwise operators [<a href="https://en.wikipedia.org/wiki/Bitwise_operation">on Wikipedia</a>]
       </p>
-      <code>
-        3 & 5 #=> 1 [<a href="https://en.wikipedia.org/wiki/Logical_conjunction">AND</a>]
+      <p><code>
+        3 & 5<br>#=> 1 [<a href="https://en.wikipedia.org/wiki/Logical_conjunction">AND</a>]
         <br>
-        3 | 5 #=> 7 [<a href="https://en.wikipedia.org/wiki/Logical_disjunction">OR</a>]
+        3 | 5<br>#=> 7 [<a href="https://en.wikipedia.org/wiki/Logical_disjunction">OR</a>]
         <br>
-        3 ^ 5 #=> 6 [<a href="https://en.wikipedia.org/wiki/Exclusive_disjunction">XOR</a>]
-      </code>
+        3 ^ 5<br>#=> 6 [<a href="https://en.wikipedia.org/wiki/Exclusive_disjunction">XOR</a>]
+      </code></p>
     </section>
     <section id="Everything_is_an_object" class="main-section 6">
       <header>Everything is an object</header>
@@ -144,208 +144,207 @@
         Arithmetic is just syntactic sugar
         for calling a method on an object
       </p>
-      <code>
-        1.+(3) #=> 4
+      <p><code>
+        1.+(3)<br>#=> 4
         <br>
-        10.* 5 #=> 50
+        10.* 5<br>#=> 50
         <br>
-        100.methods.include?(:/) #=> true
-      </code>
+        100.methods.include?(:/)<br>#=> true
+      </code></p>
       <p class="comment">
         Special values are objects
       </p>
-      <code>
+      <p><code>
         nil # equivalent to null in other languages
         <br>
         true # truth
         <br>
         false # falsehood
-      </code>
-      <code>
-        nil.class #=> NilClass
+      </code></p>
+      <p><code>
+        nil.class<br>#=> NilClass
         <br>
-        true.class #=> TrueClass
+        true.class<br>#=> TrueClass
         <br>
-        false.class #=> FalseClass
-      </code>
+        false.class<br>#=> FalseClass
+      </code></p>
     </section>
     <section id="Comparisons_and_Operators" class="main-section 7">
       <header>Comparisons and Operators</header>
       <p class="comment">
         Equality
       </p>
-      <code>
-        1 == 1 #=> true
+      <p><code>
+        1 == 1<br>#=> true
         <br>
-        2 == 1 #=> false
-      </code>
+        2 == 1<br>#=> false
+      </code></p>
       <p class="comment">
         Inequality
       </p>
-      <code>
-        1 != 1 #=> false
+      <p><code>
+        1 != 1<br>#=> false
         <br>
-        2 != 1 #=> true
-      </code>
+        2 != 1<br>#=> true
+      </code></p>
       <p class="comment">
         Apart from false itself, nil is the only other 'falsey' value
       </p>
-      <code>
-        !!nil   #=> false
+      <p><code>
+        !!nil  <br>#=> false
         <br>
-        !!false #=> false
+        !!false<br>#=> false
         <br>
-        !!0     #=> true
+        !!0    <br>#=> true
         <br>
-        !!""    #=> true
-      </code>
+        !!""   <br>#=> true
+      </code></p>
       <p class="comment">
         More comparisons
       </p>
-      <code>
-        1 < 10 #=> true
+      <p><code>
+        1 < 10<br>#=> true
         <br>
-        1 > 10 #=> false
+        1 > 10<br>#=> false
         <br>
-        2 <= 2 #=> true
+        2 <= 2<br>#=> true
         <br>
-        2 >= 2 #=> true
-      </code>
+        2 >= 2<br>#=> true
+      </code></p>
       <p class="comment">
-        Combined comparison operator (returns `1` when the first argument is greater,
-        `-1` when the second argument is greater, and `0` otherwise)
+        Combined comparison operator (returns <code>1</code> when the first argument is greater,
+        <code>-1</code> when the second argument is greater, and <code>0</code> otherwise)
       </p>
-      <code>
-        1 <=> 10 #=> -1 (1 < 10)
+      <p><code>
+        1 <=> 10<br>#=> -1 (1 < 10)
         <br>
-        10 <=> 1 #=> 1 (10 > 1)
+        10 <=> 1<br>#=> 1 (10 > 1)
         <br>
-        1 <=> 1 #=> 0 (1 == 1)
-      </code>
+        1 <=> 1<br>#=> 0 (1 == 1)
+      </code></p>
     </section>
     <section id="Logical_Operators" class="main-section 8">
       <header>Logical Operators</header>
       <p class="comment">
         Logical operators
       </p>
-      <code>
-        true && false #=> false
+      <p><code>
+        true && false<br>#=> false
         <br>
-        true || false #=> true
-      </code>
+        true || false<br>#=> true
+      </code></p>
       <p class="comment">
         There are alternate versions of the logical operators with much lower
         precedence. These are meant to be used as flow-control constructs to chain
         statements together until one of them returns true or false.
       </p>
       <p class="comment">
-        `do_something_else` only called if `do_something` succeeds.
+      <code>do_something_else</code> only called if <code>do_something</code> succeeds.
       </p>
-      <code>
+      <p><code>
         do_something() and do_something_else()
-      </code>
+      </code></p>
       <p class="comment">
-        `log_error` only called if `do_something` fails.
+      <code>log_error</code> only called if <code>do_something</code> fails.
       </p>
-      <code>
+      <p><code>
         do_something() or log_error()
-      </code>
+      </code></p>
     </section>
     <section id="String_Interpolation_and_Manipulation" class="main-section 9">
       <header>String Interpolation and Manipulation</header>
       <p class="comment">
         String interpolation
       </p>
-      <code>
+      <p><code>
         placeholder = 'use string interpolation'
         <br>
         "I can #{placeholder} when using double quoted strings"
-      </code>
-      <p class="comment">
+        <br>
         #=> "I can use string interpolation when using double quoted strings"
-      </p>
+      </code></p>
       <p class="comment">
-        You can combine strings using `+`, but not with other types
+        You can combine strings using <code>+</code>, but not with other types
       </p>
-      <code>
-        'hello ' + 'world'  #=> "hello world"
+      <p><code>
+        'hello ' + 'world' <br>#=> "hello world"
         <br>
-        'hello ' + 3 #=> TypeError: can't convert Fixnum into String
+        'hello ' + 3<br>#=> TypeError: can't convert Fixnum into String
         <br>
-        'hello ' + 3.to_s #=> "hello 3"
+        'hello ' + 3.to_s<br>#=> "hello 3"
         <br>
-        "hello #{3}" #=> "hello 3"
-      </code>
+        "hello #{3}"<br>#=> "hello 3"
+      </code></p>
       <p class="comment">
         ...or combine strings and operators
       </p>
-      <code>
-        'hello ' * 3 #=> "hello hello hello "
-      </code>
+      <p><code>
+        'hello ' * 3<br>
+        #=> "hello hello hello "
+      </code></p>
       <p class="comment">
         ...or append to string
       </p>
-      <code>
-        'hello' << ' world' #=> "hello world"
-      </code>
+      <p><code>
+        'hello' << ' world'<br>
+        #=> "hello world"
+      </code></p>
       <p class="comment">
         You can print to the output with a newline at the end
       </p>
-      <code>
+      <p><code>
         puts "I'm printing!"
-      </code>
-      <p class="comment">
+      <br>
         #=> I'm printing!
-      </p>
-      <p class="comment">
+      <br>
         #=> nil
-      </p>
+      </code></p>
       <p class="comment">
         ...or print to the output without a newline
       </p>
-      <code>
+      <p><code>
         print "I'm printing!"
-      </code>
-      <p class="comment">
+      <br>
         #=> "I'm printing!" => nil
-      </p>
+      </code></p>
     </section>
     <section id="Variables" class="main-section 10">
       <header>Variables</header>
       <p class="comment">
         Variables
       </p>
-      <code>
-        x = 25 #=> 25
-        <br>
-        x #=> 25
-      </code>
+      <p><code>
+        x = 25<br>
+        #=> 25<br>
+        x<br>
+        #=> 25
+      </code></p>
       <p class="comment">
         Note that assignment returns the value assigned.
         <br>
         This means you can do multiple assignment.
       </p>
-      <code>
-        x = y = 10 #=> 10
-        <br>
-        x #=> 10
-        <br>
-        y #=> 10
-      </code>
+      <p><code>
+        x = y = 10<br>
+        #=> 10<br>
+        x<br>
+        #=> 10<br>
+        y<br>
+        #=> 10
+      </code></p>
       <p class="comment">
         By convention, use snake_case for variable names.
       </p>
-      <code>
+      <p><code>
         snake_case = true
-      </code>
+      </code></p>
       <p class="comment">
         Use descriptive variable names
       </p>
-      <code>
-        <br>
-        path_to_project_root = '/good/name/'
+      <p><code>
+        path_to_project_root = '/good/name/'<br>
         m = '/bad/name/'
-      </code>
+      </code></p>
     </section>
     <section id="Symbols" class="main-section 11">
       <header>Symbols</header>
@@ -354,29 +353,30 @@
         integer value. They're often used instead of strings to efficiently convey
         specific, meaningful values.
       </p>
-      <code>
-        :pending.class #=> Symbol
-      </code>
-      <code>
+      <p><code>
+        :pending.class<br>
+        #=> Symbol
+      </code></p>
+      <p><code>
         status = :pending
-      </code>
-      <code>
-        status == :pending #=> true
-      </code>
-      <code>
-        status == 'pending' #=> false
-      </code>
-      <code>
-        status == :approved #=> false
-      </code>
+      </code></p>
+      <p><code>
+        status == :pending<br>#=> true
+      </code></p>
+      <p><code>
+        status == 'pending'<br>#=> false
+      </code></p>
+      <p><code>
+        status == :approved<br>#=> false
+      </code></p>
       <p class="comment">
         Strings can be converted into symbols and vice versa.
       </p>
-      <code>
-        status.to_s #=> "pending"
+      <p><code>
+        status.to_s<br>#=> "pending"
         <br>
-        "argon".to_sym #=> :argon
-      </code>
+        "argon".to_sym<br>#=> :argon
+      </code></p>
     </section>
     <section id="Arrays" class="main-section 12">
       <header>Arrays</header>
@@ -386,88 +386,88 @@
       <p class="comment">
         This is an array.
       </p>
-      <code>
-        array = [1, 2, 3, 4, 5] #=> [1, 2, 3, 4, 5]
-      </code>
+      <p><code>
+        array = [1, 2, 3, 4, 5]<br>#=> [1, 2, 3, 4, 5]
+      </code></p>
       <p class="comment">
         Arrays can contain different types of items.
       </p>
-      <code>
-        [1, 'hello', false] #=> [1, "hello", false]
-      </code>
+      <p><code>
+        [1, 'hello', false]<br>#=> [1, "hello", false]
+      </code></p>
       <p class="comment">
         Arrays can be indexed.
         From the front...
       </p>
-      <code>
-        array[0] #=> 1
+      <p><code>
+        array[0]<br>#=> 1
         <br>
-        array.first #=> 1
+        array.first<br>#=> 1
         <br>
-        array[12] #=> nil
-      </code>
+        array[12]<br>#=> nil
+      </code></p>
       <p class="comment">
         ...or from the back...
       </p>
-      <code>
-        array[-1] #=> 5
+      <p><code>
+        array[-1]<br>#=> 5
         <br>
-        array.last #=> 5
-      </code>
+        array.last<br>#=> 5
+      </code></p>
       <p class="comment">
         ...or with a start index and length...
       </p>
-      <code>
-        array[2, 3] #=> [3, 4, 5]
-      </code>
+      <p><code>
+        array[2, 3]<br>#=> [3, 4, 5]
+      </code></p>
       <p class="comment">
         ...or with a range...
       </p>
-      <code>
-        array[1..3] #=> [2, 3, 4]
-      </code>
+      <p><code>
+        array[1..3]<br>#=> [2, 3, 4]
+      </code></p>
       <p class="comment">
         You can reverse an Array.<br>
         Return a new array with reversed values
       </p>
-      <code>
-        [1,2,3].reverse #=> [3,2,1]
-      </code>
+      <p><code>
+        [1,2,3].reverse<br>#=> [3,2,1]
+      </code></p>
       <p class="comment">
         Reverse an array in place to update variable with reversed values
       </p>
-      <code>
+      <p><code>
         a = [1,2,3]
         <br>
-        a.reverse! #=> a==[3,2,1] because of the bang ('!') call to reverse
-      </code>
+        a.reverse!<br>#=> a==[3,2,1] because of the bang ('!') call to reverse
+      </code></p>
       <p class="comment">
         Like arithmetic, [var] access is just syntactic sugar
         for calling a method '[]' on an object.
       </p>
-      <code>
-        array.[] 0 #=> 1
+      <p><code>
+        array.[] 0<br>#=> 1
         <br>
-        array.[] 12 #=> nil
-      </code>
+        array.[] 12<br>#=> nil
+      </code></p>
       <p class="comment">
         You can add to an array...
       </p>
-      <code>
-        array << 6 #=> [1, 2, 3, 4, 5, 6]
-      </code>
+      <p><code>
+        array << 6<br>#=> [1, 2, 3, 4, 5, 6]
+      </code></p>
       <p class="comment">
         Or like this
       </p>
-      <code>
-        array.push(6) #=> [1, 2, 3, 4, 5, 6]
-      </code>
+      <p><code>
+        array.push(6)<br>#=> [1, 2, 3, 4, 5, 6]
+      </code></p>
       <p class="comment">
         ...and check if an item exists in an array
       </p>
-      <code>
-        array.include?(1) #=> true
-      </code>
+      <p><code>
+        array.include?(1)<br>#=> true
+      </code></p>
     </section>
     <section id="Hashes" class="main-section 13">
       <header>Hashes</header>
@@ -476,47 +476,47 @@
         <br>
         Hashes are denoted with curly braces.
       </p>
-      <code>
+      <p><code>
         hash = { 'color' => 'green', 'number' => 5 }
-      </code>
-      <code>
-        hash.keys #=> ['color', 'number']
-      </code>
+      </code></p>
+      <p><code>
+        hash.keys<br>#=> ['color', 'number']
+      </code></p>
       <p class="comment">
         Hashes can be quickly looked up by key.
       </p>
-      <code>
-        hash['color'] #=> "green"
+      <p><code>
+        hash['color']<br>#=> "green"
         <br>
-        hash['number'] #=> 5
-      </code>
+        hash['number']<br>#=> 5
+      </code></p>
       <p class="comment">
         Asking a hash for a key that doesn't exist returns nil.
       </p>
-      <code>
-        hash['nothing here'] #=> nil
-      </code>
+      <p><code>
+        hash['nothing here']<br>#=> nil
+      </code></p>
       <p class="comment">
         When using symbols for keys in a hash, you can use an alternate syntax.
       </p>
-      <code>
+      <p><code>
         has = { :defcon => 3, :action => true }
         <br>
-        has.keys #=> [:defcon, :action]
+        has.keys<br>#=> [:defcon, :action]
         <br>
         <br>
         has = { defcon: 3, action: true }
         <br>
-        hash.keys #=> [:defcon, :action]
-      </code>
+        hash.keys<br>#=> [:defcon, :action]
+      </code></p>
       <p class="comment">
         Check existence of keys and values in hash
       </p>
-      <code>
-        has.key?(:defcon) #=> true
+      <p><code>
+        has.key?(:defcon)<br>#=> true
         <br>
-        hash.value?(3) #=> true
-      </code>
+        hash.value?(3)<br>#=> true
+      </code></p>
       <p class="comment">
         Tip: Both Arrays and Hashes are Enumerable!<br>
         They share a lot of useful methods such as each, map, count, and more.
@@ -530,7 +530,7 @@
       <p class="comment">
         Conditionals
       </p>
-      <code>
+      <p><code>
         if true
         <br>
         &nbsp;&nbsp;'if statement'
@@ -544,23 +544,23 @@
         &nbsp;&nbsp;'else, also optional'
         <br>
         end
-      </code>
+      </code></p>
       <p class="comment">
         If a condition controls invocation of a single statement rather than a block of code
         <br>
         you can use postfix-if notation
       </p>
-      <code>
+      <p><code>
         warnings = ['Patronimic is missing', 'Address too short']
         <br>
         puts("Some warnings occurred:\n" + warnings.join("\n"))  if !warnings.empty?
-      </code>
+      </code></p>
       <p class="comment">
-        Rephrase condition if `unless` sounds better than `if`
+        Rephrase condition if <code>unless</code> sounds better than <code>if</code>
       </p>
-      <code>
+      <p><code>
         puts("Some warnings occurred:\n" + warnings.join("\n"))  unless warnings.empty?
-      </code>
+      </code></p>
     </section>
     <section id="Loops" class="main-section 16">
       <header>Loops</header>
@@ -568,22 +568,22 @@
         Loops
       </p>
       <p class="comment">
-        In Ruby, traditional `for` loops aren't very common. Instead, these
+        In Ruby, traditional <code>for</code> loops aren't very common. Instead, these
         <br>
-        basic loops are implemented using enumerable, which hinges on `each`.
+        basic loops are implemented using enumerable, which hinges on <code>each</code>.
       </p>
-      <code>
+      <p><code>
         (1..5).each do |counter|
         <br>
         &nbsp;&nbsp;puts "iteration #{counter}"
         <br>
         end
-      </code>
+      </code></p>
       <p class="comment">
         Which is roughly equivalent to the following, which is unusual to see in Ruby.
       </p>
       <p class="comment">
-        The `do |variable| ... end` construct above is called a 'block'. Blocks are similar
+        The <code>do |variable| ... end</code> construct above is called a 'block'. Blocks are similar
         <br>
         to lambdas, anonymous functions or closures in other programming languages. They can
         <br>
@@ -597,13 +597,13 @@
       <p class="comment">
         You can also surround blocks in curly brackets.
       </p>
-      <code>
+      <p><code>
         (1..5).each { |counter| puts "iteration #{counter}" }
-      </code>
+      </code></p>
       <p class="comment">
         The contents of data structures can also be iterated using each.
       </p>
-      <code>
+      <p><code>
         array.each do |element|
         <br>
         &nbsp;&nbsp;puts "#{element} is part of the array"
@@ -615,31 +615,31 @@
         &nbsp;&nbsp;puts "#{key} is #{value}"
         <br>
         end
-      </code>
+      </code></p>
       <p class="comment">
         If you still need an index you can use 'each_with_index' and define an index
         <br>
         variable.
       </p>
-      <code>
+      <p><code>
         array.each_with_index do |element, index|
         <br>
         &nbsp;&nbsp;puts "#{element} is number #{index} in the array"
         <br>
         end
-      </code>
-      <code>
+      </code></p>
+      <p><code>
         counter = 1
         while counter <= 5 do
         &nbsp;&nbsp;puts "iteration #{counter}"
         &nbsp;&nbsp;counter += 1
         end
-        #=> iteration 1
-        #=> iteration 2
-        #=> iteration 3
-        #=> iteration 4
-        #=> iteration 5
-      </code>
+       <br>#=> iteration 1
+       <br>#=> iteration 2
+       <br>#=> iteration 3
+       <br>#=> iteration 4
+       <br>#=> iteration 5
+      </code></p>
       <p class="comment">
         There are a bunch of other helpful looping functions in Ruby.
         <br>
@@ -649,7 +649,7 @@
         <br>
         to it as defined in your block, and returns an entirely new array.
       </p>
-      <code>
+      <p><code>
         array = [1,2,3,4,5]
         <br>
         doubled = array.map do |element|
@@ -665,14 +665,14 @@
         puts array
         <br>
         #=> [1,2,3,4,5]
-      </code>
+      </code></p>
     </section>
     <section id="Case_Construct" class="main-section 17">
       <header>Case Construct</header>
       <p class="comment">
         Case construct
       </p>
-      <code>
+      <p><code>
         grade = 'B'
         <br>
         <br>
@@ -705,11 +705,11 @@
         end
         <br>
         #=> "Better luck next time"
-      </code>
+      </code></p>
       <p class="comment">
         Cases can also use ranges
       </p>
-      <code>
+      <p><code>
         grade = 82
         <br>
         case grade
@@ -729,11 +729,11 @@
         end
         <br>
         #=> "OK job"
-      </code>
+      </code></p>
     </section>
     <section id="Exception_Handling" class="main-section 18">
       <header>Exception Handling</header>
-      <code>
+      <p><code>
         begin
         <br>
         &nbsp;&nbsp;# Code here that might raise an exception
@@ -757,48 +757,48 @@
         &nbsp;&nbsp;puts 'This code always runs no matter what'
         <br>
         end
-      </code>
+      </code></p>
     </section>
     <section id="Methods" class="main-section 19">
       <header>Methods</header>
-      <code>
+      <p><code>
         def double(x)
         <br>
         &nbsp;&nbsp;x * 2
         <br>
         end
-      </code>
+      </code></p>
       <p class="comment">
         Methods (and blocks) implicitly return the value of the last statement.
       </p>
-      <code>
-        double(2) #=> 4
-      </code>
+      <p><code>
+        double(2)<br>#=> 4
+      </code></p>
       <p class="comment">
         Parentheses are optional where the interpretation is unambiguous.
       </p>
-      <code>
-        double 3 #=> 6
-      </code>
-      <code>
-        double double 3 #=> 12
-      </code>
-      <code>
+      <p><code>
+        double 3<br>#=> 6
+      </code></p>
+      <p><code>
+        double double 3<br>#=> 12
+      </code></p>
+      <p><code>
         def sum(x, y)
         <br>
         &nbsp;&nbsp;x + y
         <br>
         end
-      </code>
+      </code></p>
       <p class="comment">
         Method arguments are separated by a comma.
       </p>
-      <code>
-        sum 3, 4 #=> 7
-      </code>
-      <code>
-        sum sum(3, 4), 5 #=> 12
-      </code>
+      <p><code>
+        sum 3, 4<br>#=> 7
+      </code></p>
+      <p><code>
+        sum sum(3, 4), 5<br>#=> 12
+      </code></p>
     </section>
     <!-- next up: yield, line 373 -->
     <section id="" class="main-section 20">

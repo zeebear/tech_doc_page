@@ -196,3 +196,11 @@ section > header {
   font-family: sans-serif;
   font-size: 28px;
 }
+
+#Control_Structures > header {
+  color: red;
+}
+
+code {
+  background-color: #DCDCDC;
+}
